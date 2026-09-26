@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<title>صباح الخير يا كل حياتي ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"Aref Ruqaa","Cairo","Traditional Arabic","Amiri",serif}
+body{
+  overflow-x:hidden;
+  color:#fff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,120,160,.22), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(180,90,180,.20), transparent 30%),
+    linear-gradient(135deg,#120914,#2a0d22 48%,#100812);
+}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.screen{
+  position:relative;z-index:2;min-height:100vh;display:flex;
+  align-items:center;justify-content:center;padding:28px 16px;
+}
+.card{
+  width:min(720px,94vw);padding:36px 24px 42px;text-align:center;
+  background:rgba(25,12,24,.72);border:1px solid rgba(255,255,255,.13);
+  border-radius:30px;box-shadow:0 25px 80px rgba(0,0,0,.55),0 0 55px rgba(255,70,130,.12);
+  backdrop-filter:blur(14px);animation:appear 1.6s ease both;
+}
+.heart{font-size:52px;animation:pulse 1.6s infinite;display:inline-block}
+h1{font-size:clamp(28px,7vw,52px);margin:12px 0 8px;line-height:1.3}
+.subtitle{font-family:"Cairo","Aref Ruqaa",serif;color:#f7cbd9;font-size:17px;margin-bottom:25px}
+.poem{font-family:"Aref Ruqaa","Cairo","Traditional Arabic","Amiri",serif;font-size:21px;line-height:2.15;color:#fff}
+.line{margin:3px 0}
+.highlight{color:#ffb7cf;text-shadow:0 0 16px rgba(255,120,170,.35)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,170,200,.55),transparent);margin:24px 0}
+button{
+  border:0;border-radius:999px;padding:13px 24px;margin-top:18px;
+  color:white;background:linear-gradient(135deg,#d52d67,#8d2f9b);
+  font-size:16px;cursor:pointer;box-shadow:0 8px 30px rgba(213,45,103,.35);
+  transition:.25s;
+}
+button:hover{transform:translateY(-2px) scale(1.02)}
+.signature{margin-top:25px;font-size:22px;color:#ffd5e1}
+#secret{display:none;margin-top:18px;color:#ffdce7;font-size:17px;line-height:1.9}
+.float{
+  position:fixed;bottom:-40px;font-size:22px;opacity:.8;z-index:1;
+  animation:rise linear forwards;pointer-events:none
+}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+@keyframes pulse{50%{transform:scale(1.12)}}
+@keyframes appear{from{opacity:0;transform:translateY(30px) scale(.97)}to{opacity:1;transform:none}}
+
+/* romantic upgrade */
+.intro{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:radial-gradient(circle at 50% 45%,#4b1638 0,#190b18 45%,#08050a 100%);transition:opacity 1s,transform 1s}
+.intro.hide{opacity:0;transform:scale(1.08);pointer-events:none}
+.intro-glow{position:absolute;width:260px;height:260px;border-radius:50%;background:#ff477e;filter:blur(90px);opacity:.16}
+.intro-heart{font-size:78px;animation:pulse 1.5s infinite;filter:drop-shadow(0 0 22px #ff477e)}
+.intro-small{font-size:15px;color:#eab6c8;margin:20px 0 8px;letter-spacing:2px}
+.intro h2{font-size:clamp(30px,8vw,58px);line-height:1.35;margin:0 0 28px;font-weight:700}
+.enter{position:relative;z-index:2}
+.topline{font-size:12px;letter-spacing:4px;color:#dca8bb;margin-bottom:12px}
+h1 span{color:#ffb5ca;text-shadow:0 0 28px rgba(255,100,150,.25)}
+.little-note{font-family:"Cairo","Aref Ruqaa",serif;font-size:13px;color:#cfa9b8;max-width:520px;margin:0 auto 25px;line-height:1.9}
+.seal{color:#f1a7bd;letter-spacing:10px;margin:28px 0 4px}
+.signature{font-size:22px;color:#ffd5e1;margin-top:20px}
+.final{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(5,2,7,.82);backdrop-filter:blur(14px)}
+.final.show{display:flex}
+.final-box{width:min(600px,94vw);text-align:center;padding:40px 25px;border-radius:30px;border:1px solid rgba(255,190,210,.2);background:linear-gradient(145deg,rgba(58,19,43,.94),rgba(17,8,18,.96));box-shadow:0 0 90px rgba(255,55,125,.18);animation:appear .8s ease}
+.final-heart{font-size:65px;animation:pulse 1.5s infinite}
+.final-box h2{font-size:clamp(23px,6vw,38px);line-height:1.5}
+.final-box p{font-family:"Aref Ruqaa","Cairo",serif;font-size:21px;line-height:2.1;color:#f4d7e1}
+.final-sign{color:#ffb6cc;font-size:19px;margin:18px}
+@media(max-width:520px){.card{padding:30px 17px 35px}.poem{font-size:16px;line-height:2.05}h1{font-size:34px}}
+</style>
+</head>
+<body>
+<div id="intro" class="intro">
+  <div class="intro-glow"></div>
+  <div class="intro-heart">❤️</div>
+  <p class="intro-small">الى من يسكنها قلبي...</p>
+  <h2>هناك رسالة<br>لا تشبه اي رسالة</h2>
+  <button class="enter" onclick="openLetter()">افتحي قلبك اولا... ثم افتحيها ❤️</button>
+</div>
+<canvas id="stars"></canvas>
+<div class="moon"></div>
+<div class="screen">
+  <main class="card">
+    <div class="topline">♡ رسالة من قلبي اليك ♡</div>
+    <div class="heart">🐻❤️</div>
+    <h1>صباح الخير<br><span>يا كل حياتي</span></h1>
+    <div class="subtitle">الى المرأة التي جعلت قلبي يعرف معنى ان يكون له وطن 🌹</div>
+    <div class="little-note">اقرئيها ببطء... فكل كلمة فيها كتبت من مكان لا يعرفه سواك ❤️</div>
+
+    <section class="poem">
+      <div class="line">🌅 صباح الخير يا بعد اهلي وناسي</div>
+      <div class="line">يا اول اسم يسكن بالي وامنياتي 💌</div>
+      <div class="line">صباح الخير يا حبا يسكن مهجتي</div>
+      <div class="line">ويا نبضا يرافقني بكل خطواتي ❤️</div>
+      <div class="line">يا حبيبتي يا عمري يا كل دنيتي</div>
+      <div class="line">ويا من اختصرت الحب في كل جهاتي 🫶🏻</div>
+
+      <div class="divider"></div>
+
+      <div class="line">🌹 يا سيدة القلب يا نبض قلبي وروحي</div>
+      <div class="line">يا اغلى ما عندي ويا سر ابتساماتي</div>
+      <div class="line">انت فرحة قلبي حين يحزن خاطري</div>
+      <div class="line">وانت سعادتي واول واخر امنياتي 🥹❤️</div>
+
+      <div class="line">انت دنيتي حين تضيق بي الدنيا</div>
+      <div class="line">وانت اجمل ايامي واحلى ذكرياتي 🌷</div>
+      <div class="line">وانت اول شخص يخطر في بالي</div>
+      <div class="line">حين يطلع الصبح وتشرق امنياتي ☀️</div>
+
+      <div class="divider"></div>
+
+      <div class="line">❤️ يا اول من اشتاق اليه اذا ابتعدت</div>
+      <div class="line">ويا اخر اسم ينام بين دعواتي</div>
+      <div class="line">اراكي في الحلم حين يغفو جفني</div>
+      <div class="line">والقاك في قلبي بين نبضاتي 🫀</div>
+
+      <div class="line">🤍 وكم اتمنى ان اراك نائمة بقربي</div>
+      <div class="line">فاضمك حتى تهدا كل اشتياقاتي</div>
+      <div class="line">واقول لك والليل ساكن حولنا</div>
+      <div class="line">نامي فقلبي يحرس احلامك ونوماتك 🌙🐻</div>
+
+      <div class="line">💋 وكلما اشتقت اليك تمنيت قبلة</div>
+      <div class="line">تطفئ نار الشوق في صدر لهفاتي</div>
+      <div class="line">وكلما غبت عن عيني ولو لحظة</div>
+      <div class="line">صار حضورك اكثر الاشياء في بالي وذاتي ❤️‍🔥</div>
+
+      <div class="divider"></div>
+
+      <div class="line">🌹 صباح الخير يا اجمل خير عرفته</div>
+      <div class="line">يا من جعلت الحب اجمل رواياتي</div>
+      <div class="line">يا حبيبتي يا اماني يا قطعة من قلبي</div>
+      <div class="line">ويا سر سعادتي ويا كل امنياتي 💗</div>
+
+      <div class="line">🥹 احبك لا لانك اجمل النساء فقط</div>
+      <div class="line">بل لانك اجمل معنى سكن حياتي</div>
+      <div class="line">ولانك حين دخلت القلب مرة</div>
+      <div class="line">لم يبق بعدك مكان لغيرك في جهاتي ❤️</div>
+
+      <div class="line">🤲🏻 الله يخليك لي ولا يحرمني منك</div>
+      <div class="line">ولا يجعل البعد يوما من نصيباتي</div>
+      <div class="line">فانت يا حبيبتي لست عابرة في عمري</div>
+      <div class="line">انت العمر ان سالوني عن حياتي 🫂❤️</div>
+
+      <div class="divider"></div>
+      <div class="line highlight">🐻❤️ صباح الخير يا روحي ويا قطعة من قلبي</div>
+      <div class="line highlight">يا حبيبة القلب ويا سر ابتساماتي</div>
+      <div class="line highlight">صباح الخير يا اجمل ما في دنيتي</div>
+      <div class="line highlight">وصباح الحب يا كل حياتي 🌹❤️</div>
+    </section>
+
+    <div class="seal">✦ ✧ ✦</div>
+    <button onclick="showSecret()">هناك شيء اخير اخفيته لك... ❤️</button>
+    <div id="secret">لو كان بيدي ان اهديك شيئا كل صباح، لأهديتك قلبي من جديد... حتى تعرفي انك كل يوم تختارين نفس الرجل، ويختارك قلبه من جديد. 🥹❤️</div>
+    
+  <div class="signature">محمد ❤️</div>
+  </main>
+</div>
+
+<div id="final" class="final">
+  <div class="final-box">
+    <div class="final-heart">❤️</div>
+    <h2>ولو خيروني بين العالم كله وبينك...</h2>
+    <p>لاخترتك دون تردد،<br>ثم اخترتك مرة اخرى،<br>وفي كل حياة اعيشها... سأبحث عنك من جديد.</p>
+    <div class="final-sign">الى الابد... 🐻❤️</div>
+    <button onclick="closeFinal()">عودي الى رسالتي 🌹</button>
+  </div>
+</div>
+
+<script>
+const c=document.getElementById("stars"),x=c.getContext("2d");
+function resize(){c.width=innerWidth;c.height=innerHeight} resize(); addEventListener("resize",resize);
+let s=Array.from({length:110},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.7+.3,a:Math.random()}));
+function draw(){
+  x.clearRect(0,0,c.width,c.height);
+  s.forEach(p=>{p.a+=.01;x.globalAlpha=.25+.35*Math.sin(p.a);x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle="#fff";x.fill()});
+  requestAnimationFrame(draw)
+} draw();
+function floatHeart(){
+  const e=document.createElement("div");e.className="float";
+  e.textContent=["❤️","💗","💖","🌹","🐻","✨"][Math.floor(Math.random()*6)];
+  e.style.left=Math.random()*100+"vw";e.style.animationDuration=(5+Math.random()*6)+"s";
+  document.body.appendChild(e);setTimeout(()=>e.remove(),12000)
+}
+setInterval(floatHeart,650);
+function openLetter(){
+  document.getElementById("intro").classList.add("hide");
+  setTimeout(()=>document.getElementById("intro").style.display="none",1000);
+  for(let i=0;i<24;i++) setTimeout(floatHeart,i*70);
+}
+function showSecret(){
+  const q=document.getElementById("secret");q.style.display="block";
+  for(let i=0;i<25;i++) setTimeout(floatHeart,i*70);
+  setTimeout(()=>document.getElementById("final").classList.add("show"),900);
+}
+function closeFinal(){document.getElementById("final").classList.remove("show");}
+</script>
+</body>
+</html>
